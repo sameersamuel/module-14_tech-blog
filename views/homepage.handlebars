@@ -1,0 +1,16 @@
+
+{{#each posts as |posts| }}
+<div class="row mb-4 posts">
+  <div class="col-md-5">
+    <h2>
+      <a href="/posts/{{posts.id}}">{{posts.title}}</a>
+    </h2>
+    <p>Created by {{posts.username}} on {{format_date posts.createdAt}}</p>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{posts.text}}
+    </p>
+  </div>
+</div>
+{{/each}}
